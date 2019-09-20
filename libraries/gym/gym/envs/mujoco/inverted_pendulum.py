@@ -13,7 +13,7 @@ class InvertedPendulumEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         ob = self._get_obs()
         notdone = np.isfinite(ob).all() #and (np.abs(ob[1]) <= .2)
         done = not notdone
-        reward = (-(2*(abs(ob[0])-np.pi)**2 + ob[1]**2) - 0.1*a[0]**2)/10.0
+        reward = (-(2*ob[0]**2 + ob[1]**2) - 0.01*a[0]**2)
 
         return ob, reward, done, {}
 

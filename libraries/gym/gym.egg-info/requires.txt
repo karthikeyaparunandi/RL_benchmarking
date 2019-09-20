@@ -8,14 +8,14 @@ cloudpickle~=1.2.0
 enum34~=1.1.6
 
 [all]
-mujoco_py<2.1,>=1.50
-imageio
-mujoco_py<2.1,>=1.50
-imageio
 atari_py~=0.2.0
 Pillow
 opencv-python
 box2d-py~=2.3.5
+mujoco_py<2.1,>=1.50
+imageio
+mujoco_py<2.1,>=1.50
+imageio
 
 [atari]
 atari_py~=0.2.0
