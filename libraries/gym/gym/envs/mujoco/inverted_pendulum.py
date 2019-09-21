@@ -5,7 +5,7 @@ from gym.envs.mujoco import mujoco_env
 class InvertedPendulumEnv(mujoco_env.MujocoEnv, utils.EzPickle):
     def __init__(self):
         utils.EzPickle.__init__(self)
-        mujoco_env.MujocoEnv.__init__(self, '../../../../../../models/pendulum.xml', 1)
+        mujoco_env.MujocoEnv.__init__(self, '../../../../../../models/pendulum.xml', 1, np.array([np.pi]), np.array([0]))
 
     def step(self, a):
         
@@ -13,7 +13,7 @@ class InvertedPendulumEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         ob = self._get_obs()
         notdone = np.isfinite(ob).all() #and (np.abs(ob[1]) <= .2)
         done = not notdone
-        reward = (-(2*ob[0]**2 + ob[1]**2) - 0.01*a[0]**2)
+        reward = (-(2*ob[0]**2 + 0.1*ob[1]**2) - 0.01*a[0]**2)
 
         return ob, reward, done, {}
 

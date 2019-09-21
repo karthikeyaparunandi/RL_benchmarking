@@ -36,7 +36,7 @@ class MujocoEnv(gym.Env):
     """Superclass for all MuJoCo environments.
     """
 
-    def __init__(self, model_path, frame_skip):
+    def __init__(self, model_path, frame_skip, init_qpos, init_qvel):
         if model_path.startswith("/"):
             fullpath = model_path
         else:
@@ -55,8 +55,8 @@ class MujocoEnv(gym.Env):
             'video.frames_per_second': int(np.round(1.0 / self.dt))
         }
 
-        self.init_qpos = np.array([np.pi]).ravel().copy()#self.sim.data.qpos.ravel().copy()
-        self.init_qvel = self.sim.data.qvel.ravel().copy()
+        self.init_qpos = init_qpos#self.sim.data.qpos.ravel().copy()
+        self.init_qvel = init_qvel#self.sim.data.qvel.ravel().copy()
 
         self._set_action_space()
 

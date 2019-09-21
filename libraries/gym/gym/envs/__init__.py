@@ -240,6 +240,13 @@ register(
 )
 
 register(
+    id='CartPole-v2',
+    entry_point='gym.envs.mujoco:CartPoleEnv',
+    max_episode_steps=30,
+    reward_threshold=475.0,
+)
+
+register(
     id='InvertedDoublePendulum-v2',
     entry_point='gym.envs.mujoco:InvertedDoublePendulumEnv',
     max_episode_steps=1000,
@@ -277,7 +284,21 @@ register(
 register(
     id='Swimmer-v2',
     entry_point='gym.envs.mujoco:SwimmerEnv',
-    max_episode_steps=1000,
+    max_episode_steps=800,
+    reward_threshold=360.0,
+)
+
+register(
+    id='Fish-v2',
+    entry_point='gym.envs.mujoco:FishEnv',
+    max_episode_steps=1200,
+    reward_threshold=360.0,
+)
+
+register(
+    id='Swimmer6-v2',
+    entry_point='gym.envs.mujoco:Swimmer6Env',
+    max_episode_steps=800,
     reward_threshold=360.0,
 )
 

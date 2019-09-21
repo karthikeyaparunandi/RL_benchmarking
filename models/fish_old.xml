@@ -6,7 +6,7 @@
   </asset>
 
 
-  <option timestep="0.005" density="5000">
+  <option timestep="0.001" density="5000">
     <flag gravity="disable" constraint="disable"/>
   </option>
 

@@ -3,12 +3,12 @@
     "act_noise":	0.1,
     "actor_critic":	"mlp_actor_critic",
     "batch_size":	100,
-    "env_fn":	"<function <lambda> at 0x7fd0d81fde18>",
+    "env_fn":	"<function <lambda> at 0x7fbc7e166e18>",
     "epochs":	200,
     "exp_name":	"exp_1",
     "gamma":	0.99,
     "logger":	{
-        "<spinup.utils.logx.EpochLogger object at 0x7fd0d3c09080>":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7fbc7cd87978>":	{
             "epoch_dict":	{},
             "exp_name":	"exp_1",
             "first_row":	true,
